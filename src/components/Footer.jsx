@@ -1,0 +1,50 @@
+import React from "react";
+
+export const Footer = () => {
+  return (
+    <>
+      <footer className="flex-center">
+        <div className="top flex">
+          <div className="links">
+            <h3>Links</h3>
+            <ul>
+              <li>
+                <a href="#hero">Home</a>
+              </li>
+              <li>
+                <a href="#skills">Skills</a>
+              </li>
+              <li>
+                <a href="#projects">Projects</a>
+              </li>
+              <li>
+                <a href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div className="socials">
+            <h3>Social Links</h3>
+            <ul>
+              <li>
+                <a href="">LinkedIn</a>
+              </li>
+              <li>
+                <a href="">Github</a>
+              </li>
+              <li>
+                <a href="">Facebook</a>
+              </li>
+              <li>
+                <a href="">Youtube</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="bottom">&copy Copyright All Rights Reserved 2026</div>
+      </footer>
+      <a href="#hero" className="goUp flex-center">
+        <i className="fa-solid fa-chevron-up"></i>
+      </a>
+    </>
+  );
+};
