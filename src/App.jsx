@@ -1,3 +1,4 @@
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import { About } from "./components/About";
 import { Contact } from "./components/Contact";
@@ -6,40 +7,41 @@ import { Hero } from "./components/Hero";
 import { Navbar } from "./components/Navbar";
 import { Projects } from "./components/Projects";
 import { Skills } from "./components/Skills";
+import { Layout } from "./components/Layout";
 
 function App() {
   return (
     <>
       {/* <!-- Dark Mode Toggler --> */}
-      <input type="checkbox" name="" id="darkMode" />
-      <div className="wrapper">
-        <label htmlFor="darkMode">
-          <i className="fa-solid fa-circle-half-stroke"></i>
-        </label>
 
-        {/* <!-- NavBar Section --> */}
-        <Navbar />
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route path="/" element={<Hero />} />
+          <Route path="skills" element={<Skills />} />
+          <Route path="projects" element={<Projects />} />
+          <Route path="about" element={<About />} />
+          <Route path="contact" element={<Contact />} />
+        </Route>
+      </Routes>
 
-        {/* <!-- Hero Section --> */}
-        <Hero />
+      {/* <!-- Hero Section --> */}
+      {/* <Hero /> */}
 
-        {/* <!-- Banner Section --> */}
+      {/* <!-- Banner Section --> */}
 
-        {/* <!-- Skills Section --> */}
-        <Skills />
+      {/* <!-- Skills Section --> */}
+      {/* <Skills /> */}
 
-        {/* <!-- Projects Section --> */}
-        <Projects />
+      {/* <!-- Projects Section --> */}
+      {/* <Projects /> */}
 
-        {/* <!-- About Me Section --> */}
-        <About />
+      {/* <!-- About Me Section --> */}
+      {/* <About /> */}
 
-        {/* <!-- Contact Section --> */}
-        <Contact />
+      {/* <!-- Contact Section --> */}
+      {/* <Contact /> */}
 
-        {/* <!-- Footer --> */}
-        <Footer />
-      </div>
+      {/* <!-- Footer --> */}
     </>
   );
 }
